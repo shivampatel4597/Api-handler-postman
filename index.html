@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Api Handler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Navbar Scroll</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled text-white" aria-disabled="true">Link</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="my-3">Welcome to API Handler</h1>
+        <div class="form-group row">
+            <label for="url" class="col-sm-2 col-form-label">URL</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="urlField" placeholder="Enter URL here">
+            </div>
+        </div>
+        
+        <!-- Request Type -->
+        <div class="form-group row mt-3">
+            <label for="requestType" class="col-sm-2 col-form-label">Request Type</label>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="requestType" id="get" value="GET">
+                    <label class="form-check-label" for="get">GET</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="requestType" id="post" value="POST">
+                    <label class="form-check-label" for="post">POST</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Type -->
+        <div class="form-group row mt-3">
+            <label for="contentType" class="col-sm-2 col-form-label">Content Type</label>
+            <div class="col-sm-10">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contentType" id="jsonRadio" value="json">
+                    <label class="form-check-label" for="jsonRadio">JSON</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contentType" id="paramsRadio" value="params">
+                    <label class="form-check-label" for="paramsRadio">Custom Parameters</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="d-flex  gap-2 mx-5">
+                   
+        </div> -->
+        <!-- Parameters Box -->
+         <div id="parametersBox">
+            <div class="parametersbox mt-4 d-flex justify-content-start align-items-center gap-3">
+                <label>Parameter 1</label>
+                <div class="d-flex  gap-2 mx-5">
+                    <input type="text" class="form-control mb-2" id="parameterKey1" placeholder="Enter parameter 1 key">
+                    <input type="text" class="form-control mb-2" id="parameterValue1" placeholder="Enter parameter 1 value">
+                    <button id="addParams" class="bg-danger rounded text-white fs-6">+</button>
+                </div>
+            </div>
+         </div>
+      
+         <div id="params">
+
+         </div>
+
+        <!-- JSON Request Box -->
+         <div id="jsonRequestBox">
+            <div class="mt-4     d-flex justify-content-start align-items-start  gap-3 ">
+                <label for="jsonRequest">JSON Request</label>
+                <textarea class="form-control w-75 h-75" rows="4" id="jsonRequest" placeholder="Enter your JSON request here"></textarea>
+            </div>
+         </div>
+     
+
+        <div class="form-group row mt-3">
+
+            <div class="col-sm-10">
+               <button  class="btn btn-primary">submit</button>
+              
+            </div>
+        </div>
+
+        <!-- response Box -->
+        <div class="my-4     d-flex justify-content-start align-items-start  gap-3 ">
+            <label for="responseRequest">Response</label>
+            <textarea class="form-control w-75 h-75" rows="4" id="responseRequest" placeholder="Enter your JSON request here"></textarea>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="/index.js  "></script>
+</body>
+</html>
